@@ -1,10 +1,8 @@
 var myHeaders = new Headers();
 var message1 = "Yahoo!";
-var myInit = {
-    method: "GET",
-};
 var lat="";
 var long="";
+// This data variable is declared as a global variable.
 var data;
 var jsobj;
 var weather;
@@ -24,19 +22,18 @@ function showPosition(position) {
     "<br>Longitude: " + position.coords.longitude;
     getWeather(lat,long);
 }
+
 function getWeather(lat, long) {
     lat = "lat=" + lat;
     long ="lon=" + long;
     url = url + lat +"&"+long;
      
-     fetch(url, myInit)
-.then(response => response.json())
-.then(data => {
-    weather = JSON.stringify(data)
-    document.getElementById("weather1").innerHTML = weather;
-}
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        // Look up. This function has a formal argument named data. This data
+        // will overshadow the global data variable.
+        weather = JSON.stringify(data)
+        document.getElementById("weather1").innerHTML = data.main.temp + " 'C";
+    }
 )}
-console.log(data);
-console.log(url);
-console.log(weather);
-console.log(jsobj);
