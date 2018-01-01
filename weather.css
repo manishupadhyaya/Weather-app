@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(1.jpg);
+    background-size: 100% 100%;
+}
+.button{
+    color: white;
+    font-size: 6vh;
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+    border-radius: 50%;
+    padding: 4vh;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.text{
+    color: white;
+    font-size: 5vh;
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+}
+.Yo{
+    color: white;
+}
+.weather{
+    color: white;
+}
+@media (max-width: 1180px)
+{
+    body{
+        margin: 0;
+        padding: 0;
+        background: url(1.jpg);
+        background-size: 100% 100%;
+    }
+    .button{
+        color: white;
+        font-size: 6vh;
+        font-family: 'Poiret One', cursive;
+        font-weight: bolder;
+        border-radius: 50%;
+        padding: 4vh;
+        cursor: pointer;
+    }
+    .container{
+        display: flex;
+        height: 100vh;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    .text{
+        color: white;
+        font-size: 4vh;
+        font-family: 'Poiret One', cursive;
+        font-weight: bolder;
+}
+@media (max-width: 580px)
+{
+    body{
+        margin: 0;
+        padding: 0;
+        background: url(1.jpg);
+        background-size: 100% 100%;
+    }
+    .button{
+        color: white;
+        font-size: 6vh;
+        font-family: 'Poiret One', cursive;
+        font-weight: bolder;
+        border-radius: 50%;
+        padding: 4vh;
+        cursor: pointer;
+    }
+    .container{
+        display: flex;
+        height: 100vh;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    .text{
+        font-size: 3vh;
+        font-family: 'Poiret One', cursive;
+        font-weight: bolder;
+        text-align: center;
+}
