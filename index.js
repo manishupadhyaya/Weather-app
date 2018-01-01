@@ -33,7 +33,7 @@ function getWeather(lat, long) {
     .then(data => {
         // Look up. This function has a formal argument named data. This data
         // will overshadow the global data variable.
-        weather = JSON.stringify(data)
+        console.log(data);
         document.getElementById("weather1").innerHTML = data.main.temp + " 'C";
     }
 )}
