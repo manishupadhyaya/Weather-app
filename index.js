@@ -36,7 +36,6 @@ function getWeather(lat, long) {
         const temp = data.current.temperature_2m;
 
         document.getElementById("weather1").innerHTML = temp + " °C";
-        setIcon(code);
     }
 )}
 function setIcon(code) {
@@ -62,5 +61,5 @@ function setIcon(code) {
     else {
         iconSrc = "icons/default.png"
     }
-        
+    document.getElementById("icon").setAttribute("src", iconSrc);
 }
