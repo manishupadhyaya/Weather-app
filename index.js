@@ -6,7 +6,6 @@ var long="";
 var data;
 var jsobj;
 var weather;
-var url="https://fcc-weather-api.glitch.me/api/current?"
 var x = document.getElementById("Yo");
 function getLocation() {
     if (navigator.geolocation) {
@@ -24,9 +23,7 @@ function showPosition(position) {
 }
 
 function getWeather(lat, long) {
-    lat = "lat=" + lat;
-    long ="lon=" + long;
-    url = url + lat +"&"+long;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&current=temperature_2m,weathercode`;
     console.log(url)
      
     fetch(url)
