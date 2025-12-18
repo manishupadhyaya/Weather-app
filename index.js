@@ -32,7 +32,35 @@ function getWeather(lat, long) {
         // Look up. This function has a formal argument named data. This data
         // will overshadow the global data variable.
         console.log(data);
-        document.getElementById('icon').setAttribute('src', data.weather[0].icon);
-        document.getElementById("weather1").innerHTML = data.main.temp + " 'C";
+        const code = data.current.weathercode;
+        const temp = data.current.temperature_2m;
+
+        document.getElementById("weather1").innerHTML = temp + " °C";
+        setIcon(code);
     }
 )}
+function setIcon(code) {
+    let iconSrc;
+    if(code===0){
+        iconSrc = "icons/clear.png"
+    }
+    else if(code>=1 && code<=3){
+        iconSrc = "icons/cloudy.png"
+    }
+    else if(code===45 || code ===48){
+        iconSrc = "icons/fog.png"
+    }
+    else if((code>=51 && code<=67) || (code>=80 && code<=82)){
+        iconSrc = "icons/rain.png"
+    }
+    else if(code>=71 && code <=77){
+        iconSrc = "icons/snow.png"
+    }
+    else if(code>=95 && code<=99){
+        iconSrc = "icons/thunder.png"
+    }
+    else {
+        iconSrc = "icons/default.png"
+    }
+        
+}
