@@ -62,5 +62,6 @@ function setIcon(code) {
     else {
         iconSrc = "icons/default.png"
     }
+    console.log("code", code, " iconSrc", iconSrc)
     document.getElementById("icon").setAttribute("src", iconSrc);
 }
