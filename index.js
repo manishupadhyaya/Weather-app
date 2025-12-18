@@ -41,6 +41,7 @@ function getWeather(lat, long) {
 function setIcon(code) {
     let iconSrc;
     if(code===0){
+        console.log("Hello")
         iconSrc = "icons/clear.png"
     }
     else if(code>=1 && code<=3){
